@@ -3,25 +3,33 @@ import linkedinIcon from "../assets/linkedinBlueIcon.png"
 import resumeIcon from "../assets/resumeBlueIcon.png"
 
 
-const Navbar = () => {
+const Navbar = ({ setLang } : {
+    setLang: (x: "pl"|"en") => void
+} ) => {
     return <nav className="navbar navbar-expand bg-body-tertiary">
         <div className="container-fluid">
-            <span className="text-primary navbar-brand mr-auto">Portfolio</span>
+            <span className="text-primary navbar-brand mr-auto">Portfolio 
+            <span className="mx-5">
+            <span> </span>
+                <button className="btn text-primary" onClick={() => { setLang("pl") }}>PL</button>
+                <button className="btn text-primary" onClick={() => { setLang("en") }} >EN</button>
+            </span>
+            </span>
 
             <div className="" id="navbarSupportedContent">
                 <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                     <li className="nav-item px-3">
-                        <a className="nav-link active" aria-current="page" href="https://www.github.com/Fleskimiso">
+                        <a target="_blank" className="nav-link active" aria-current="page" href="https://www.github.com/Fleskimiso">
                             <img src={githubIcon} alt="githubIcon" width="32px" height="32px" />
                         </a>
                     </li>
                     <li className="nav-item px-3">
-                        <a className="nav-link" href="#">
+                        <a target="_blank" className="nav-link" href="#">
                             <img src={linkedinIcon} alt="linkedinIcon" width="32px" height="32px" />
                         </a>
                     </li>
                     <li className="nav-item px-3">
-                        <a href="#" className="nav-link">
+                        <a target="_blank" href="#" className="nav-link">
                             <img src={resumeIcon} alt="resumeIcon" width="32px" height="32px" />
                         </a>
                     </li>
