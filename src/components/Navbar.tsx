@@ -8,11 +8,11 @@ const Navbar = ({ setLang } : {
 } ) => {
     return <nav className="navbar navbar-expand bg-body-tertiary">
         <div className="container-fluid">
-            <span className="text-primary navbar-brand mr-auto">Portfolio 
+            <span className="text-darkishBlue navbar-brand mr-auto">Portfolio 
             <span className="mx-5">
             <span> </span>
-                <button className="btn text-primary" onClick={() => { setLang("pl") }}>PL</button>
-                <button className="btn text-primary" onClick={() => { setLang("en") }} >EN</button>
+                <button className="btn text-darkishBlue" onClick={() => { setLang("pl") }}>PL</button>
+                <button className="btn text-darkishBlue" onClick={() => { setLang("en") }} >EN</button>
             </span>
             </span>
 

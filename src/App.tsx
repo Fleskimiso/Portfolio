@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import Navbar from './components/Navbar'
+import SkillList from './components/SkillList'
 import "./assets/css/custom.css"
 import ShortDescription from './components/ShortDescription'
 
@@ -14,7 +15,7 @@ function App() {
         <ShortDescription lang={lang} />
       </div>
 
-      <div id='skills'>Skills Container</div>
+    <SkillList lang={lang} />
       <div id='projects'> Projekty</div>
       <div id='about-me'>O mnie </div>
       <div id='contact'>Contact</div>
