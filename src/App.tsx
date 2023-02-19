@@ -3,6 +3,7 @@ import Navbar from './components/Navbar'
 import SkillList from './components/SkillList'
 import "./assets/css/custom.css"
 import ShortDescription from './components/ShortDescription'
+import ProjectList from './components/ProjectList'
 
 
 function App() {
@@ -16,7 +17,7 @@ function App() {
       </div>
 
     <SkillList lang={lang} />
-      <div id='projects'> Projekty</div>
+    <ProjectList  lang={lang}/>
       <div id='about-me'>O mnie </div>
       <div id='contact'>Contact</div>
 
