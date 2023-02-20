@@ -80,4 +80,16 @@ div .customBorder:hover a {
  border-bottom: 200px solid white;
  border-left: 100vw solid transparent;
 }
-
+.projectImg {
+    height: auto;
+    width: auto;
+    max-height: 480px;
+    max-width: 640px;
+}
+@media screen and (max-width: 992px) {
+    .projectImg {
+        max-width: 480px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
