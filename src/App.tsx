@@ -4,6 +4,9 @@ import SkillList from './components/SkillList'
 import "./assets/css/custom.css"
 import ShortDescription from './components/ShortDescription'
 import ProjectList from './components/ProjectList'
+import AboutMe from './components/AboutMe'
+import Contact from './components/Contact'
+import Footer from './components/Footer'
 
 
 function App() {
@@ -18,8 +21,9 @@ function App() {
 
     <SkillList lang={lang} />
     <ProjectList  lang={lang}/>
-      <div id='about-me'>O mnie </div>
-      <div id='contact'>Contact</div>
+    <AboutMe lang={lang} />
+    <Contact lang={lang} />
+    <Footer />
 
     </div>
   )

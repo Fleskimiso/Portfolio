@@ -5,7 +5,6 @@ import portfolio1_url from "../assets/portfolio1_1900.png";
 import portfolio2_url from "../assets/portfolio2_1900.png";
 import tracker1_url from "../assets/tracker1_1900.png"
 import tracker2_url from "../assets/tracker2_530x820.png"
-import { log } from "console";
 
 const ProjectList = (props: { lang: "pl" | "en" }) => {
 
@@ -39,13 +38,13 @@ const ProjectList = (props: { lang: "pl" | "en" }) => {
         },
         {
             title: "ProgressionTracker",
-            keyTechnologies: ["TypeScript", "Webpack", "React", "Redux", "NGINX", "ExpressJS", "MongoDB", "NodeJS", "PassportJS"],
+            keyTechnologies: ["TypeScript", "Webpack", "React", "Redux", "PWA", "NGINX", "ExpressJS", "MongoDB", "NodeJS", "PassportJS"],
             desc: ["Moja aplikacja treningowa, której sam używam do monitorowania i zbierania danych na temat progresu treningowego.\
             Aplikacja pozwala na dodawanie danych wykonanych treningów jak również do ustalenie swojego planu treningowe.\
-            Aplikacja fullstack wdrożona na własnym serwerze na linode", "\
+            Aplikacja fullstack PWA wdrożona na własnym serwerze na linode", "\
                 My training application, which I use to monitor and collect data about training progress. \
                 Application allows you to add data about training you have done and also to set your training plan.\
-                Fullstack application developed on my own server on linode."],
+                Fullstack PWA application developed on my own server on linode."],
             imgs: [tracker1_url, tracker2_url],
             currentIndex: 0,
             note: [],
@@ -98,7 +97,7 @@ const ProjectList = (props: { lang: "pl" | "en" }) => {
                                     projects[index].currentIndex = currentIndex;
                                     setProjects(newprojects);
                                 }} className="btn customBorder" type="button" >
-                                    <span className="">Previous</span>
+                                    <span className=""> {props.lang === "pl" ? "Poprzedni" : "Previous"} </span>
                                 </button>
                                 <button onClick={() => {
                                     const currentIndex = (project.currentIndex + 1 === project.imgs.length ? 0 : project.currentIndex + 1)
@@ -107,7 +106,7 @@ const ProjectList = (props: { lang: "pl" | "en" }) => {
                                     setProjects(newprojects);
                                 }}
                                     className="btn customBorder" type="button" >
-                                    <span className="">Next</span>
+                                    <span className="">{ props.lang === "pl" ? "Następny": "Next"}</span>
                                 </button>
                             </div>
                         </div>

@@ -66,6 +66,9 @@ div .customBorder:hover a {
 .vh-50 {
     height: 50vh;
 }
+.vh-75 {
+    height: 75vh;
+}
 .bg-gradient-blue-aqua {
     background: linear-gradient(to right, rgb(96, 79, 190), rgb(14, 221, 221));
 }
@@ -77,9 +80,17 @@ div .customBorder:hover a {
  background-color: transparent;
  margin-left: -15px;
  margin-right: -15px;
- border-bottom: 200px solid white;
+ border-bottom: 10vw solid white;
  border-left: 100vw solid transparent;
 }
+.left-white-traingle {
+    height: 30px;
+    background-color: transparent;
+    margin-left: -15px;
+    margin-right: -15px;
+    border-top: 10vw solid white;
+    border-right: 100vw solid transparent;
+   }
 .projectImg {
     height: auto;
     width: auto;
@@ -92,4 +103,7 @@ div .customBorder:hover a {
         margin-left: auto;
         margin-right: auto;
     }
+}
+.h-150px {
+    height: 150px;
 }
