@@ -1,11 +1,25 @@
+import React from "react"
 import githubIcon from "../assets/githubBlueIcon.png"
 import linkedinIcon from "../assets/linkedinBlueIcon.png"
 import resumeIcon from "../assets/resumeBlueIcon.png"
 
 
-const Navbar = ({ setLang } : {
-    setLang: (x: "pl"|"en") => void
+const Navbar = ({ setLang, lang } : {
+    setLang: (x: "pl"|"en") => void,
+    lang: "pl" | "en"
 } ) => {
+
+
+    //To do linked in profile
+    const handleLinkedIn = (e: React.MouseEvent<HTMLAnchorElement>) =>{
+        e.preventDefault();
+        if(lang === "pl"){
+            alert("Mój profil linkedin nie jest jeszcze gotowy :(")
+        }else {
+            alert("My linkedin profile is not ready :(");
+        }
+    }
+    
     return <nav className="navbar navbar-expand bg-body-tertiary">
         <div className="container-fluid navbar-main">
             <span className="text-lighterBlue navbar-brand mr-auto">Portfolio 
@@ -24,7 +38,7 @@ const Navbar = ({ setLang } : {
                         </a>
                     </li>
                     <li className="nav-item px-3">
-                        <a target="_blank" className="nav-link" href="#">
+                        <a onClick={handleLinkedIn} target="_blank" className="nav-link" href="#">
                             <img src={linkedinIcon} alt="linkedinIcon" width="32px" height="32px" />
                         </a>
                     </li>

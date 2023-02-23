@@ -15,7 +15,7 @@ function App() {
   return (
     <div className="App">
       <div className='vh-100'>
-        <Navbar setLang={setLang} />
+        <Navbar lang={lang} setLang={setLang} />
         <ShortDescription lang={lang} />
       </div>
 
@@ -23,7 +23,7 @@ function App() {
     <ProjectList  lang={lang}/>
     <AboutMe lang={lang} />
     <Contact lang={lang} />
-    <Footer />
+    <Footer lang={lang} />
 
     </div>
   )

@@ -29,7 +29,12 @@ const Contact = (props: { lang: "pl" | "en" }) => {
             } else {
                 setresponseMessage("An error occured during the request");
             }
-        })
+        });
+        if(props.lang === "pl") {
+            alert("api po stronie serwera nie jest jeszcze zrobione :(");
+        } else {
+            alert("backend api call is not ready yet :(");
+        }
     }
 
     return <div id='contact' className="mb-4">
