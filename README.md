@@ -1,3 +1,3 @@
 # Portfolio
 
-Strona z moim portfolio
+Static react app site with my portfolio
