@@ -18,7 +18,7 @@ const Footer = (props: {lang: "pl" | "en"}) => {
         <a target="_blank" className="px-3 " aria-current="page" href="https://www.github.com/Fleskimiso">
             <img src={githubIcon} alt="githubIcon" width="32px" height="32px" />
         </a>
-        <a onClick={handleLinkedIn} target="_blank" className="px-3" href="#">
+        <a target="_blank" className="px-3" href="https://www.linkedin.com/in/dawid-paw%C5%82owicz-57a98a197/">
             <img src={linkedinIcon} alt="linkedinIcon" width="32px" height="32px" />
         </a>
         <a target="_blank" href="/cv" className="px-3">

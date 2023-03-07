@@ -38,7 +38,7 @@ const Navbar = ({ setLang, lang } : {
                         </a>
                     </li>
                     <li className="nav-item px-3">
-                        <a onClick={handleLinkedIn} target="_blank" className="nav-link" href="#">
+                        <a target="_blank" className="nav-link" href="https://www.linkedin.com/in/dawid-paw%C5%82owicz-57a98a197/">
                             <img src={linkedinIcon} alt="linkedinIcon" width="32px" height="32px" />
                         </a>
                     </li>
