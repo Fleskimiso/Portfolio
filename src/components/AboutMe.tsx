@@ -34,7 +34,7 @@ const AboutMe = (props: { lang: "pl" | "en" }) => {
                         </p>
                         <p>
                             My first programming experience started in 2018 learning C++,
-                            but I took my a bigger take on my development since last few months
+                            but I took a bigger take on my development since last few months
                             and decided that internet technologies are what is the most interesting to me.
                         </p>
                         <div style={{ "textIndent": "0%" }}>
@@ -46,7 +46,7 @@ const AboutMe = (props: { lang: "pl" | "en" }) => {
                 <div className="d-flex flex-row justify-content-center mt-3">
                     <button className="btn customBorder me-3">
                         {/* to do add cv */}
-                        <a target="_blank" className="text-decoration-none text-white" href="#">CV</a>
+                        <a target="_blank" className="text-decoration-none text-white" href="/cv">CV</a>
                     </button>
                     <button className="btn customBorder ">
                         <a href="https://www.github.com/Fleskimiso" target="_blank" className="text-white text-decoration-none" >Github</a>

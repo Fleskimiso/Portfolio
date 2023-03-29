@@ -51,10 +51,90 @@ const ProjectList = (props: { lang: "pl" | "en" }) => {
             gitLink: "https://github.com/Fleskimiso/ProgressionTracker",
             appLink: "https://progressiontracker.vexor.pl"
         }
+    ]);
+
+    const [commProjects, setcommProjects] = useState([
+
     ])
 
     return <div className="container-fluid" id='projects'>
-        <div className="title text-center fs-4 mb-4 mt-5"> {props.lang === "pl" ? "Projekty" : "Projects"}</div>
+        <div className="title text-center fs-3 mb-4 mt-5"> {props.lang === "pl" ? "Projekty" : "Projects"}</div>
+        <div className="mt-3 d-flex flex-row justify-content-center align-items-center">
+            <button className="btn customBorder me-3">
+                <a href="#commercial" className="text-lighterBlue fs-5 text-decoration-none">{props.lang === "pl" ? "Dla ludzi" : "For People"}</a>
+            </button>
+            <button className="btn customBorder">
+                <a href="#personal" className="text-lighterBlue fs-5 text-decoration-none">{props.lang === "pl" ? "Personalne" : "Personal"}</a>
+            </button>
+        </div>
+
+        <div id="commercial" className="title text-center fs-4 mb-4 mt-5">{props.lang === "pl" ? "Projekty dla wykonane dla ludzi" : "Projects made for people"}</div>
+
+        <div className="d-flex flex-column">
+            {projects.map((project, index) => {
+                return <div className="d-flex flex-column flex-lg-row align-items-center justify-content-center justify-content-lg-left col-lg-10 col-xxl-8 mx-auto mb-5" key={project.title}>
+                    <div className="col-8 col-lg-4 ">
+                        <div className="text-left fs-3">{project.title}</div>
+                        <div className="d-flex flex-row justify-content-left flex-wrap" >
+                            {project.keyTechnologies.map(tech => {
+                                return <div key={tech} className="text-white bg-secondary my-1 mx-1 p-2">{tech}</div>
+                            })}
+                        </div>
+                        <div className="mt-2">
+                            {props.lang === "pl" ? project.desc[0] : project.desc[1]}
+                        </div>
+                        <div className="mt-2">
+                            {props.lang === "pl" ? project.note[0] : project.note[1]}
+                        </div>
+                        <div className="mt-2">
+                            <button className="btn customBorder me-3">
+                                <a className="text-lighterBlue fs-5 text-decoration-none" href={project.appLink} target="_blank" rel="noopener noreferrer">{props.lang === "pl" ? "\
+                    Aplikacja" : "Live"}</a>
+                            </button>
+                            <button className="btn customBorder">
+                                <a className="text-lighterBlue fs-5 text-decoration-none" href={project.gitLink} target="_blank" rel="noopener noreferrer">Github</a>
+                            </button>
+                        </div>
+                    </div>
+                    <div className="mx-lg-auto my-5">
+                        <div >
+                            <div className="">
+                                <div className="">
+                                    <img src={project.imgs[project.currentIndex]} className="projectImg" alt="..." />
+                                </div>
+                            </div>
+                            <div className="mt-3 d-flex flex-row justify-content-evenly align-items-center">
+                                <button onClick={() => {
+                                    //changing current img index of current project inline 
+                                    //module by project imgs length when set over length boundary
+                                    const currentIndex = (project.currentIndex - 1 === -1 ? project.imgs.length - 1 : project.currentIndex - 1);
+                                    const newprojects = [...projects];
+                                    projects[index].currentIndex = currentIndex;
+                                    setProjects(newprojects);
+                                }} className="btn customBorder" type="button" >
+                                    <span className=""> {props.lang === "pl" ? "Poprzedni" : "Previous"} </span>
+                                </button>
+                                <button onClick={() => {
+                                    const currentIndex = (project.currentIndex + 1 === project.imgs.length ? 0 : project.currentIndex + 1)
+                                    const newprojects = [...projects];
+                                    projects[index].currentIndex = currentIndex;
+                                    setProjects(newprojects);
+                                }}
+                                    className="btn customBorder" type="button" >
+                                    <span className="">{ props.lang === "pl" ? "Następny": "Next"}</span>
+                                </button>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+            })}
+        </div>
+
+{/* a BREEEEAK  */}
+        <div id="personal" className="title text-center fs-4 mb-4 mt-5"> {props.lang === "pl" ? "Personalne Projekty" : "Personal Projects"}</div>
         <div className="d-flex flex-column">
             {projects.map((project, index) => {
                 return <div className="d-flex flex-column flex-lg-row align-items-center justify-content-center justify-content-lg-left col-lg-10 col-xxl-8 mx-auto mb-5" key={project.title}>

@@ -31,7 +31,7 @@ const Navbar = ({ setLang, lang } : {
             </span>
 
             <div className="" id="navbarSupportedContent">
-                <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+                <ul className="navbar-nav d-flex flex-column flex-md-row me-auto mb-2 mb-lg-0">
                     <li className="nav-item px-3">
                         <a target="_blank" className="nav-link active" aria-current="page" href="https://www.github.com/Fleskimiso">
                             <img src={githubIcon} alt="githubIcon" width="32px" height="32px" />
