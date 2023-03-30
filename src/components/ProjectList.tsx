@@ -3,8 +3,11 @@ import yelpcamp1_url from "../assets/YelpCamp1_640.png";
 import yelpcamp2_url from "../assets/YelpCamp2_640.png";
 import portfolio1_url from "../assets/portfolio1_1900.png";
 import portfolio2_url from "../assets/portfolio2_1900.png";
-import tracker1_url from "../assets/tracker1_1900.png"
-import tracker2_url from "../assets/tracker2_530x820.png"
+import tracker1_url from "../assets/tracker1_1900.png";
+import tracker2_url from "../assets/tracker2_530x820.png";
+import chatlin1_url from "../assets/chatlin1_1900.png";
+import historia1_url from "../assets/historia1_1900.png";
+import historia2_url from "../assets/historia2_1900.png";
 
 const ProjectList = (props: { lang: "pl" | "en" }) => {
 
@@ -34,7 +37,7 @@ const ProjectList = (props: { lang: "pl" | "en" }) => {
             currentIndex: 0,
             note: [],
             gitLink: "https://github.com/Fleskimiso/Portfolio/",
-            appLink: "http://localhost:5173/"
+            appLink: "https://www.veraxus.pl"
         },
         {
             title: "ProgressionTracker",
@@ -49,12 +52,46 @@ const ProjectList = (props: { lang: "pl" | "en" }) => {
             currentIndex: 0,
             note: [],
             gitLink: "https://github.com/Fleskimiso/ProgressionTracker",
-            appLink: "https://progressiontracker.vexor.pl"
+            appLink: "https://progressiontracker.veraxus.pl"
         }
     ]);
 
     const [commProjects, setcommProjects] = useState([
-
+        {
+            title: "chatApp",
+            titleEng: "chatApp",
+            keyTechnologies: ["TypeScript", "React", "Redux", "Socket.IO"
+                , "ExpressJS", "MongoDB", "NodeJS", "PassportJS", "HTML", "CSS", "Bootstrap"],
+            desc: ["Przykładowa aplikacja komunikacyjna, która pozwala na komunikację w czasie\
+         rzeczywistym z innymi użytkownikami. Przykład projektu wykonany na zlecenie dla pewnej osoby.\
+            Nadal w fazie rozwoju. Główną technologią dzięki, której aplikacja funkcjonuję jest \
+            biblioteka Socket.IO",
+                "A simple chat application, which allows you to communicate in real time with other users.\
+            This is a project I did for a client. It is still in development phase. The main\
+            technology which makes this application work is Socket.IO library."],
+            imgs: [chatlin1_url],
+            currentIndex: 0,
+            note: ["",""],
+            gitLink: "",
+            appLink: "https://chatlin.veraxus.pl",
+            collabolators: [] 
+        },
+        {
+            title: "Historia internetu",
+            titleEng: "Internet History",
+            keyTechnologies: ["HTML", "CSS", "Firebase"],
+            desc: ["Projekty wykonany na zlecenie dla pewnej studentki. Prosty projekt\
+            opiera się głównie podstawowym html'u i css'u. Zhostowany na firebase. Jest\
+            to mój pierwszy płatny projekt",
+            "A simple project I did for a student. It is based on basic html and css\
+                and is hosted on firebase. It is my first paid project."],
+            imgs: [historia1_url, historia2_url],
+            currentIndex: 0,
+            gitLink: "",
+            note: ["", ""],
+            appLink: "https://historiainternetu-89c4a.web.app/index.html",
+            collabolators: []
+        }
     ])
 
     return <div className="container-fluid" id='projects'>
@@ -71,10 +108,10 @@ const ProjectList = (props: { lang: "pl" | "en" }) => {
         <div id="commercial" className="title text-center fs-4 mb-4 mt-5">{props.lang === "pl" ? "Projekty dla wykonane dla ludzi" : "Projects made for people"}</div>
 
         <div className="d-flex flex-column">
-            {projects.map((project, index) => {
+            {commProjects.map((project, index) => {
                 return <div className="d-flex flex-column flex-lg-row align-items-center justify-content-center justify-content-lg-left col-lg-10 col-xxl-8 mx-auto mb-5" key={project.title}>
                     <div className="col-8 col-lg-4 ">
-                        <div className="text-left fs-3">{project.title}</div>
+                        <div className="text-left fs-3">{props.lang === "pl" ? project.title : project.titleEng}</div>
                         <div className="d-flex flex-row justify-content-left flex-wrap" >
                             {project.keyTechnologies.map(tech => {
                                 return <div key={tech} className="text-white bg-secondary my-1 mx-1 p-2">{tech}</div>
@@ -91,9 +128,11 @@ const ProjectList = (props: { lang: "pl" | "en" }) => {
                                 <a className="text-lighterBlue fs-5 text-decoration-none" href={project.appLink} target="_blank" rel="noopener noreferrer">{props.lang === "pl" ? "\
                     Aplikacja" : "Live"}</a>
                             </button>
-                            <button className="btn customBorder">
+                            {
+                                project.gitLink !== "" ? <button className="btn customBorder">
                                 <a className="text-lighterBlue fs-5 text-decoration-none" href={project.gitLink} target="_blank" rel="noopener noreferrer">Github</a>
-                            </button>
+                            </button> : ""
+                            }
                         </div>
                     </div>
                     <div className="mx-lg-auto my-5">
@@ -103,27 +142,29 @@ const ProjectList = (props: { lang: "pl" | "en" }) => {
                                     <img src={project.imgs[project.currentIndex]} className="projectImg" alt="..." />
                                 </div>
                             </div>
-                            <div className="mt-3 d-flex flex-row justify-content-evenly align-items-center">
+                            {
+                                project.imgs.length > 1 ? <div className="mt-3 d-flex flex-row justify-content-evenly align-items-center">
                                 <button onClick={() => {
                                     //changing current img index of current project inline 
                                     //module by project imgs length when set over length boundary
                                     const currentIndex = (project.currentIndex - 1 === -1 ? project.imgs.length - 1 : project.currentIndex - 1);
-                                    const newprojects = [...projects];
-                                    projects[index].currentIndex = currentIndex;
-                                    setProjects(newprojects);
+                                    const newprojects = [...commProjects];
+                                    commProjects[index].currentIndex = currentIndex;
+                                    setcommProjects(newprojects);
                                 }} className="btn customBorder" type="button" >
                                     <span className=""> {props.lang === "pl" ? "Poprzedni" : "Previous"} </span>
                                 </button>
                                 <button onClick={() => {
                                     const currentIndex = (project.currentIndex + 1 === project.imgs.length ? 0 : project.currentIndex + 1)
-                                    const newprojects = [...projects];
-                                    projects[index].currentIndex = currentIndex;
-                                    setProjects(newprojects);
+                                    const newprojects = [...commProjects];
+                                    commProjects[index].currentIndex = currentIndex;
+                                    setcommProjects(newprojects);
                                 }}
                                     className="btn customBorder" type="button" >
-                                    <span className="">{ props.lang === "pl" ? "Następny": "Next"}</span>
+                                    <span className="">{props.lang === "pl" ? "Następny" : "Next"}</span>
                                 </button>
-                            </div>
+                            </div> : ""
+                            }
                         </div>
 
 
@@ -133,7 +174,7 @@ const ProjectList = (props: { lang: "pl" | "en" }) => {
             })}
         </div>
 
-{/* a BREEEEAK  */}
+        {/* a BREEEEAK  */}
         <div id="personal" className="title text-center fs-4 mb-4 mt-5"> {props.lang === "pl" ? "Personalne Projekty" : "Personal Projects"}</div>
         <div className="d-flex flex-column">
             {projects.map((project, index) => {
@@ -186,7 +227,7 @@ const ProjectList = (props: { lang: "pl" | "en" }) => {
                                     setProjects(newprojects);
                                 }}
                                     className="btn customBorder" type="button" >
-                                    <span className="">{ props.lang === "pl" ? "Następny": "Next"}</span>
+                                    <span className="">{props.lang === "pl" ? "Następny" : "Next"}</span>
                                 </button>
                             </div>
                         </div>

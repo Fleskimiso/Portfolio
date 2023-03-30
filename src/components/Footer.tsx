@@ -21,7 +21,7 @@ const Footer = (props: {lang: "pl" | "en"}) => {
         <a target="_blank" className="px-3" href="https://www.linkedin.com/in/dawid-paw%C5%82owicz-57a98a197/">
             <img src={linkedinIcon} alt="linkedinIcon" width="32px" height="32px" />
         </a>
-        <a target="_blank" href="/cv" className="px-3">
+        <a target="_blank" href={props.lang === "pl" ? "/cv" : "/cveng"} className="px-3">
             <img src={resumeIcon} alt="resumeIcon" width="32px" height="32px" />
         </a>
 

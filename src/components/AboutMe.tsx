@@ -46,7 +46,7 @@ const AboutMe = (props: { lang: "pl" | "en" }) => {
                 <div className="d-flex flex-row justify-content-center mt-3">
                     <button className="btn customBorder me-3">
                         {/* to do add cv */}
-                        <a target="_blank" className="text-decoration-none text-white" href="/cv">CV</a>
+                        <a target="_blank" className="text-decoration-none text-white" href={props.lang === "pl" ? "/cv" : "/cveng"}>CV</a>
                     </button>
                     <button className="btn customBorder ">
                         <a href="https://www.github.com/Fleskimiso" target="_blank" className="text-white text-decoration-none" >Github</a>

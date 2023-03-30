@@ -43,7 +43,7 @@ const Navbar = ({ setLang, lang } : {
                         </a>
                     </li>
                     <li className="nav-item px-3">
-                        <a target="_blank" href="/cv" className="nav-link">
+                        <a target="_blank" href={lang === "pl" ? "/cv" : "/cveng"} className="nav-link">
                             <img src={resumeIcon} alt="resumeIcon" width="32px" height="32px" />
                         </a>
                     </li>
