@@ -10,7 +10,7 @@ const AboutMe = (props: { lang: "pl" | "en" }) => {
                 {props.lang === "pl" ?
                     <div style={{ "textIndent": "10%" }}>
                         <p>
-                            Cześć, mam na imię Dawid Pawłowicz mam 20 lat i jestem web developerem. Jestem na początku swojej kariery programistycznej
+                            Cześć, mam na imię Dawid Pawłowicz i jestem web developerem. Jestem na początku swojej kariery programistycznej
                             i szukam okazji i możliwości do rozwoju swoich umiejętności.
                         </p>
                         <p>
@@ -18,8 +18,7 @@ const AboutMe = (props: { lang: "pl" | "en" }) => {
                             javascript (MERN), jednak mam też mniejsze doświadczenie innych językach jako chociażby Python, C++, Java.
                         </p>
                         <p>
-                            Swoją przygodę z programowaniem zacząłem w roku 2018 od nauki C++, jednak od paru miesięcy wziąłem się poważniej za rozwój
-                            i uznałem, że techonologie internetowe to dziedzina, która najbardziej mnie interesuje.
+                            Zainteresowanie w dziedzinie IT posiadam od paru lat i chce je cały czas rozwijać. 
                         </p>
                         <div style={{ "textIndent": "0%" }}>
                             W wolnym czasie uwielbiam uprawiać sport.
@@ -33,9 +32,7 @@ const AboutMe = (props: { lang: "pl" | "en" }) => {
                             is in the stack javascript (MERN), but I have also other languages as Python, C, Java.
                         </p>
                         <p>
-                            My first programming experience started in 2018 learning C++,
-                            but I took a bigger take on my development since last few months
-                            and decided that internet technologies are what is the most interesting to me.
+                        I have been interested in IT domain for a few years and I want to continue to develop my interest in it.
                         </p>
                         <div style={{ "textIndent": "0%" }}>
                             I like to exercise in free time.
