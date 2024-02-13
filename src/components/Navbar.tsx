@@ -25,8 +25,8 @@ const Navbar = ({ setLang, lang } : {
             <span className="text-lighterBlue navbar-brand mr-auto">Portfolio 
             <span className="mx-5">
             <span> </span>
-                <button className="btn text-lighterBlue" onClick={() => { setLang("pl") }}>PL</button>
-                <button className="btn text-lighterBlue" onClick={() => { setLang("en") }} >EN</button>
+                <button className="btn btn-info text-light mx-1" onClick={() => { setLang("pl") }}>PL</button>
+                <button className="btn btn-info text-light" onClick={() => { setLang("en") }} >EN</button>
             </span>
             </span>
 
