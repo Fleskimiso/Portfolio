@@ -5,7 +5,7 @@ const ShortDescription = (props: { lang: string; } ) => {
         <div className='d-flex flex-basis-70  flex-column '>
             <div className='fs-1 fw-bold' >{props.lang === "pl"? "Cześć, mam na imię ": "Hi, my name is "} 
             <span className="text-lighterBlue">Dawid</span></div>
-            <div className='fs-1 fw-bold'>{props.lang === "pl"? "Jestem web developerem.": "I am a web developer"} </div>
+            <div className='fs-1 fw-bold'>{props.lang === "pl"? "Jestem developerem.": "I am a developer"} </div>
             <div className='d-flex flex-row pt-2 custom-buttons-list-effect'>
                 <div className='me-2 '>
                     <button className='btn border border-primary custom-hover-effect'>

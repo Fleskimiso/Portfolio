@@ -27,14 +27,15 @@ const SkillList = (props: { lang: "pl" | "en" }) => {
                     <li>ExpressJS</li>
                     <li>MongoDB</li>
                     <li>Mongoose</li>
-                    <li>SQL</li>
+                    <li>SQL/Postgres</li>
                     <li>REST API</li>
+                    <li>Spring/Hibernate</li>
                 </ul>
             </div>
             <div className="card bg-gradient-aqua text-white mt-5 mt-md-4 mx-md-auto mx-xl-0 mt-xl-0 col-12 col-md-5 col-xl-3">
                 <div className="card-header text-center">{props.lang === "pl" ? "Inne" : "Others"} </div>
                 <ul className="card-body ms-3">
-                    <li>Linux/Bash</li>
+                    <li>Linux/Bash/Zsh</li>
                     <li>Git/Github</li>
                     <li>C/C++</li>
                     <li>Python</li>

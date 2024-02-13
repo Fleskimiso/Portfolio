@@ -8,6 +8,8 @@ import tracker2_url from "../assets/tracker2_530x820.png";
 import chatlin1_url from "../assets/chatlin1_1900.png";
 import historia1_url from "../assets/historia1_1900.png";
 import historia2_url from "../assets/historia2_1900.png";
+import invoicing1_url from "../assets/invoicing1.png";
+import invoicing2_url from "../assets/invoicing2.png";
 
 const ProjectList = (props: { lang: "pl" | "en" }) => {
 
@@ -67,7 +69,7 @@ const ProjectList = (props: { lang: "pl" | "en" }) => {
             Nadal w fazie rozwoju. Główną technologią dzięki, której aplikacja funkcjonuję jest \
             biblioteka Socket.IO",
                 "A simple chat application, which allows you to communicate in real time with other users.\
-            This is a project I did for a client. It is still in development phase. The main\
+            This is a project I did for a certain client. It is still in development phase. The main\
             technology which makes this application work is Socket.IO library."],
             imgs: [chatlin1_url],
             currentIndex: 0,
@@ -77,14 +79,32 @@ const ProjectList = (props: { lang: "pl" | "en" }) => {
             collabolators: [] 
         },
         {
+            title: "Invoicing application",
+            titleEng: "Invoicing application",
+            keyTechnologies: ["AWS", "Linux",  "Java", "Spring", "Groovy", "Gradle", "Junit", "MongoDB", "Hibernate", 
+         "Angular", "HTML", "CSS", "Bootstrap" ],
+            desc: [" Aplikacja do zarządania fakturami stworzona na kursie Java Developer.\
+            Posiada pełne wsparcie REST do dodawania, edycji, zarządzania fakturami i kontrahentami. \
+            Posiada również wbudowany kalkulator VAT. Zbudowana głownie w techonologiach Spring/Angular, zhostowany na aws",
+            "An invoice management application developed on a Java Developer course \
+            It has full REST support for adding, editing, managing invoices and contractors. \
+            It also has a built-in VAT calculator. Built primarily in Spring/Angular techonologies, hosted on aws."
+        ],
+            imgs: [invoicing1_url, invoicing2_url],
+            currentIndex: 0,
+            gitLink: "https://github.com/Fleskimiso/invoicing-system-dawid-pawlowicz",
+            note: ["" , ""],
+            appLink: "https://invoicing.veraxus.pl",
+            collabolators: ["Kamil Dzietczyk"]
+        },
+        {
             title: "Historia internetu",
             titleEng: "Internet History",
             keyTechnologies: ["HTML", "CSS", "Firebase"],
             desc: ["Projekty wykonany na zlecenie dla pewnej studentki. Prosty projekt\
-            opiera się głównie podstawowym html'u i css'u. Zhostowany na firebase. Jest\
-            to mój pierwszy płatny projekt",
+            opiera się głównie podstawowym html'u i css'u. Zhostowany na firebase.",
             "A simple project I did for a student. It is based on basic html and css\
-                and is hosted on firebase. It is my first paid project."],
+                and is hosted on firebase."],
             imgs: [historia1_url, historia2_url],
             currentIndex: 0,
             gitLink: "",

@@ -5,13 +5,14 @@ const AboutMe = (props: { lang: "pl" | "en" }) => {
             <div className="fs-2 text-white text-center">
                 {props.lang === "pl" ? "O mnie" : "About me"}
             </div>
-            <div className="text-white text-left fs-5 mx-auto col-10 col-sm-8 col-md-6 col-lg-4 ">
+            <div className="text-white text-left fs-5 mx-auto col-12 col-sm-10 col-md-8 col-lg-6 ">
 
                 {props.lang === "pl" ?
-                    <div style={{ "textIndent": "10%" }}>
+                    <div className=""  style={{ "textIndent": "10%" }}>
                         <p>
-                            Cześć, mam na imię Dawid Pawłowicz i jestem web developerem. Jestem na początku swojej kariery programistycznej
-                            i szukam okazji i możliwości do rozwoju swoich umiejętności.
+                            Cześć, mam na imię Dawid Pawłowicz i jestem developerem. Jestem na początku swojej kariery programistycznej
+                            i szukam okazji i możliwości do rozwoju swoich umiejętności. Interesuje się 
+                            inżynierią aplikacji moblinych, natywnych i w szczególnosci serwisów webowych , devOps'em, linux'em.
                         </p>
                         <p>
                             Największe doświadczenie posiadam w stacku technologicznym
@@ -25,11 +26,12 @@ const AboutMe = (props: { lang: "pl" | "en" }) => {
                         </div>
                     </div> : <div>
                         <p>
-                            Hello, my name is Dawid Pawłowicz, I am 20 years old and I am a web developer. I started my career as a programmer
-                            and I am looking for a job and opportunities to develop my skills.</p>
+                            Hello, my name is Dawid Pawłowicz and I am a developer. I started my career as a programmer
+                            and I am looking for a job and opportunities to develop my skills. I am interested in 
+                            engineering mobile, native applications and especially web services , devOps, linux.</p>
                         <p>
                             The biggest experience I have
-                            is in the stack javascript (MERN), but I have also other languages as Python, C, Java.
+                            is in the javascript stack (MERN),however  I have also other languages such as Python, C++, Java.
                         </p>
                         <p>
                         I have been interested in IT domain for a few years and I want to continue to develop my interest in it.
